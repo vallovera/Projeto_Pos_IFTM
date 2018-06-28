@@ -1,0 +1,27 @@
+
+.picker__day.picker__day--today {
+  color: red;
+}
+
+.picker__close, .picker__today {
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  color: red;
+}
+
+.picker__weekday-display {
+  background-color: #00447d !important;
+  padding: 10px;
+  font-weight: 200;
+  letter-spacing: .5;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.picker__date-display {
+  text-align: center !important;
+  background-color: #00447d !important;
+  color: #fff !important;
+  padding-bottom: 15px !important;
+  font-weight: 300 !important;
+}

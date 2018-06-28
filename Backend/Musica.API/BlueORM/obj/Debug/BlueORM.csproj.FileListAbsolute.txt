@@ -1,0 +1,11 @@
+C:\Users\flaviov\source\repos\AgroSeloApp\BlueORM\bin\Debug\BlueORM.dll
+C:\Users\flaviov\source\repos\AgroSeloApp\BlueORM\bin\Debug\BlueORM.pdb
+C:\Users\flaviov\source\repos\AgroSeloApp\BlueORM\obj\Debug\BlueORM.dll
+C:\Users\flaviov\source\repos\AgroSeloApp\BlueORM\obj\Debug\BlueORM.pdb
+C:\Users\flaviov\Source\Repos\AgroSeloApp\BlueORM\obj\Debug\BlueORM.csprojResolveAssemblyReference.cache
+C:\Users\flaviov\source\repos\Musica.API\BlueORM\bin\Debug\BlueORM.dll
+C:\Users\flaviov\source\repos\Musica.API\BlueORM\bin\Debug\BlueORM.pdb
+C:\Users\flaviov\source\repos\Musica.API\BlueORM\obj\Debug\BlueORM.csprojResolveAssemblyReference.cache
+C:\Users\flaviov\source\repos\Musica.API\BlueORM\obj\Debug\BlueORM.csproj.CoreCompileInputs.cache
+C:\Users\flaviov\source\repos\Musica.API\BlueORM\obj\Debug\BlueORM.dll
+C:\Users\flaviov\source\repos\Musica.API\BlueORM\obj\Debug\BlueORM.pdb

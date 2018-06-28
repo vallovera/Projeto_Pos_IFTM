@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musica.API", "Musica.API\Musica.API.csproj", "{97680B00-7B12-4F30-9D7B-8E5973F3C9F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueORM", "BlueORM\BlueORM.csproj", "{0DCCD7AB-2B0D-4688-98E4-DA0A2594A0ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicaDAL", "MusicaDAL\MusicaDAL.csproj", "{F7150723-6D74-4071-B824-F5E76E5B53D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97680B00-7B12-4F30-9D7B-8E5973F3C9F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97680B00-7B12-4F30-9D7B-8E5973F3C9F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97680B00-7B12-4F30-9D7B-8E5973F3C9F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97680B00-7B12-4F30-9D7B-8E5973F3C9F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DCCD7AB-2B0D-4688-98E4-DA0A2594A0ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DCCD7AB-2B0D-4688-98E4-DA0A2594A0ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DCCD7AB-2B0D-4688-98E4-DA0A2594A0ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DCCD7AB-2B0D-4688-98E4-DA0A2594A0ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7150723-6D74-4071-B824-F5E76E5B53D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7150723-6D74-4071-B824-F5E76E5B53D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7150723-6D74-4071-B824-F5E76E5B53D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7150723-6D74-4071-B824-F5E76E5B53D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B40C844-3199-41D8-9BCD-B2041DE596B3}
+	EndGlobalSection
+EndGlobal

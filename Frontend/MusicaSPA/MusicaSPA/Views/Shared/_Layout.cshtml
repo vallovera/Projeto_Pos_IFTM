@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+@*
+    Para adicionar mais componentes do materialize favor seguir esses exemplos  =**
+    http://krescruz.github.io/angular-materialize/
+*@
+
+<html lang="pt-br">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Administração Financeira</title>
+    @Styles.Render("~/Content/css/materialize.min.css")
+    @Scripts.Render("~/Content/js/jquery-3.1.1.min.js")
+    @Scripts.Render("~/Content/js/angular.min.js")
+    @Scripts.Render("~/Content/js/materialize.min.js")
+    @Scripts.Render("~/Content/js/angular-materialize.min.js")
+
+    @Scripts.Render("~/assets/js/perfect-scrollbar.min.js")
+    @Scripts.Render("~/assets/js/plugins.js")
+    @Scripts.Render("~/assets/js/prism.js")
+
+    @*Iniciando Angular e Componentes*@
+    @Scripts.Render("~/Scripts/angular-locale_pt-br.js")
+
+    @Scripts.Render("~/Scripts/hammerjs/hammer.js")
+
+    @Scripts.Render("~/AngularApp/layout/App.js")
+  
+
+    @Scripts.Render("~/Scripts/sweetalert2.all.js")
+
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/hammerjs/hammer.js")
+    @Scripts.Render("~/AngularApp/layout/Menu.js")
+
+    @Scripts.Render("~/AngularApp/layout/Header.js")
+
+    @Styles.Render("~/Content/css/MaterialIcons.css")
+
+    @Styles.Render("~/assets/css/themes/perfect-scrollbar.css")
+    @Styles.Render("~/assets/css/themes/prism.css")
+    @Styles.Render("~/assets/css/themes/style.css")
+    <script>
+        $(document).ready(function () {
+            $('.modal').modal();
+            $('.tooltipped').tooltip();
+        });
+    </script>
+    <style>
+
+        html {
+            line-height: 1.5;
+            font-family: "arial,tahoma, helvetica, sans-serif" !important;
+            font-weight: normal;
+            color: rgba(0,0,0,0.87);
+            font-size: 11px;
+            font-size: 11px !important;
+        }
+    </style>
+
+</head>
+<body>
+    <span ng-app="App">
+
+        @RenderPage("_header.cshtml")
+        <div id="main" class="main-full">
+            <!-- START WRAPPER -->
+            <div class="wrapper">
+                @RenderPage("_menu.cshtml")
+
+                <section id="content">
+                    <div class="container">
+
+                        @RenderBody()
+                    </div>
+                </section>
+            </div>
+        </div>
+        @RenderSection("Scripts", required: false)
+
+    </span>
+</body>
+</html>

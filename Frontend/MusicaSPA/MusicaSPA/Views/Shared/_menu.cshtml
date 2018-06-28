@@ -1,0 +1,47 @@
+﻿<aside id="left-sidebar-nav" ng-controller="HeaderController" class="nav-collapsible nav-collapsed" ng-controller="HeaderController">
+    <div class="brand-sidebar">
+        <h1 class="logo-wrapper">
+            <a href="index.html" class=" brand-logo darken-2" >
+                <img src="../../content/logo.png" alt="materialize logo">
+                <span class="logo-text"></span>
+            </a>
+            <a href="#" class="navbar-toggler">
+                <i class="material-icons">radio_button_unchecked</i>
+            </a>
+        </h1>
+    </div>
+    <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y" style="transform: translateX(0px);">
+        <li class="no-padding">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li class="bold">
+                    <a class="collapsible-header waves-effect waves-cyan">
+                        <i class="material-icons">library_add</i>
+                        <span class="nav-text">Cadastros</span>
+                    </a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a href="/Genero" ng-click="atualizaMenu('Tipos de Movimentações')">
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                    <span>Gêneros</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Musica" ng-click="atualizaMenu('Períodos - Aging')">
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                    <span>Musicas</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+
+        <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div>
+        <div class="ps-scrollbar-y-rail" style="top: 0px; height: 602px; right: 3px;"><div class="ps-scrollbar-y" style="top: 0px; height: 274px;"></div></div>
+    </ul>
+    <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan">
+        <i class="material-icons">menu</i>
+    </a>
+</aside>

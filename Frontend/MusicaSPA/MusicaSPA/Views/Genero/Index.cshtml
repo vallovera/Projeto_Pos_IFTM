@@ -1,0 +1,96 @@
+﻿@Scripts.Render("~/AngularApp/genero/index.js")
+
+<div style="padding:10px" id="" ng-controller="Genero">
+    <div class="row">
+        <div class="row">
+
+            <div class="input-field col s3 m3 l3">
+
+                <label for="inputCreated">Descrição do Gênero</label>
+                <input type="text"
+                       name="created"
+                       id="inputCreated"
+                       ng-model="datepicker" />
+            </div>
+            <div class="col s5 m5 l5 button-search" style="margin-top:23px">
+                <button class="btn waves-effect waves-light blue lighten-1 left" name="action" ng-click="getBuscaPeriodos()">
+                    Pesquisar
+                    <i class="material-icons left">search</i>
+                </button>
+                <div class="col s5 m5 l5 button-add_box">
+                    <a class="waves-effect waves-light modal-trigger" data-toggle="modal" data-target="novoGenero">
+                        <button class="btn waves-effect waves-light blue lighten-1 right" name="action" ng-click="limpaPeriodo()">
+                            Novo Gênero
+                            <i class="material-icons right">add_box</i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <table class="striped centered grid-border">
+            <thead class="grid-background">
+                <tr>
+                    <th class="grid-border left">Gênero</th>
+                    <th class="grid-border">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                @*<tr *ngFor="let d of data | async | paginate: { itemsPerPage: 20, currentPage: p } | filter:term" (click)="setClickedRow(d)">*@
+                <tr ng-repeat="d in data" ng-click="setClickedRow(d)">
+                    <td class="grid-border">{{ d.Nome }}</td>
+                    <td class="grid-border">
+                        <!-- <a class="waves-effect waves-light btn-small tooltipped" data-position="bottom" (click)="openDetails(d.id)"><i class="material-icons left">remove_red_eye</i></a> -->
+                        <a class="waves-effect waves-light modal-trigger" href="#editarPeriodo"><i class="material-icons left">edit</i></a>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Próxima">
+        </pagination-controls>
+    </div>
+
+    <div id="novoGenero" class="modal">
+        <div class="modal-header">
+            <i class="material-icons icons">add_box</i>
+            <span style="vertical-align: middle;">Novo Gênero</span>
+        </div>
+        <div class="modal-content">
+            <input type="text" name="periodoReferencia" ng-model="genero.Nome" />
+            <label for="periodoReferencia">Nome do Gênero</label>
+        </div>
+        <div class="modal-footer">
+            <a class="btn-confirm modal-action modal-close waves-effect waves-blue btn blue" style="margin-left:10px" ng-click="salvarNovoGenero()">Salvar</a>
+            <a class="btn-cancel modal-action modal-close waves-effect waves-orange btn orange lighten-1" ng-click="limpaGenero()">Cancelar</a>
+        </div>
+    </div>
+    <div id="editarPeriodo" class="modal">
+        <div class="modal-header">
+            <i class="material-icons icons">edit</i>
+            <h4>Editando:</h4>
+            <span style="vertical-align: middle;">Nome do Gênero</span>
+            <input type="text" id="editPeriodoNome" name="editPeriodo" ng-value="genero.Nome" ng-model="editNameAging" />
+        </div>
+        <div class="modal-content">
+            <p>Você confirma a alteração do Gênero?</p>
+        </div>
+        <div class="modal-footer">
+            <a class="btn-confirm modal-action modal-close waves-effect waves-blue btn blue" style="margin-left:10px" ng-click="atualizaGenero()">Confirmar</a>
+            <a class="btn-cancel modal-action modal-close waves-effect waves-orange btn orange lighten-1" ng-click="limpaGenero()">Cancelar</a>
+        </div>
+    </div>
+    <div id="ativarInativarPeriodo" class="modal">
+        <div class="modal-header">
+            <i class="material-icons icons">delete</i>
+            <span style="vertical-align: middle;">Remover Gênero</span>
+        </div>
+        <div class="modal-content">
+            <p>Você deseja realmente remover este Gênero?</p>
+        </div>
+        <div class="modal-footer">
+            <a class="btn-confirm modal-action modal-close waves-effect waves-blue btn blue" style="margin-left:10px" ng-click="removerPeriodo()">Confirmar</a>
+            <a class="btn-cancel modal-action modal-close waves-effect waves-orange btn orange lighten-1" ng-click="limpaPeriodo()">Cancelar</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿<style>
+    span.badge.new::after {
+        content: " Alertas"!important;
+    }
+</style>
+
+<header id="header" class="page-topbar">
+    <div class="navbar-fixed" ng-app="App" ng-controller="HeaderController">
+        <nav class="navbar-color">
+            <div class="nav-wrapper " style="background-color: #00447d">
+
+                <div class="header-search-wrapper hide-on-med-and-down sideNav-lock">
+                    <a href="#" class="brand-logo header-martins">  Trabalho Acadêmico Flávio Vallovera Marques </a>
+
+                </div>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a class="header-content" [routerLink]="['/']">
+                            <span class="row">
+                                Bem vindo,Carlos Eduardo       <span class="new glyphicon-heart red"></span>
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>

@@ -271,6 +271,7 @@
     <Content Include="AngularApp\layout\Menu.js" />
     <Content Include="AngularApp\models\user.js" />
     <Content Include="AngularApp\models\user.ts" />
+    <Content Include="AngularApp\musica\index.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\bootstrap.css" />

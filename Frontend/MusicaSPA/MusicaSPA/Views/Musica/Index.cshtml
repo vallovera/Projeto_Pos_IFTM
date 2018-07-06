@@ -1,1 +1,124 @@
-﻿
+﻿@Scripts.Render("~/AngularApp/musica/index.js")
+
+<div style="padding:10px" id="" ng-controller="Musica">
+    <div class="row">
+        <div class="row">
+
+            <div class="input-field col s3 m3 l3">
+
+                <label for="inputCreated">Pesquisar Letra Música</label>
+                <input type="text"
+                       name="created"
+                       id="inputCreated"
+                       ng-model="pesquisa" />
+            </div>
+            <div class="col s5 m5 l5 button-search" style="margin-top:23px">
+
+                <div class="col s5 m5 l5 button-add_box">
+                    <a class="waves-effect waves-light modal-trigger" data-toggle="modal" data-target="novomusica">
+                        <button class="btn waves-effect waves-light blue lighten-1 right" name="action" ng-click="limpaPeriodo()">
+                            Nova Música
+                            <i class="material-icons right">add_box</i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <table class="striped centered grid-border">
+            <thead class="grid-background">
+                <tr>
+                    <th class="grid-border left">Música</th>
+                    <th class="grid-border ">Letra</th>
+                    <th class="grid-border ">Gêneros</th>
+                    <th class="grid-border ">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                @*<tr *ngFor="let d of data | async | paginate: { itemsPerPage: 20, currentPage: p } | filter:term" (click)="setClickedRow(d)">*@
+                <tr ng-repeat="d in data  | filter:{letra:pesquisa}" ng-click="setClickedRow(d)">
+                    <td class="grid-border">{{ d.nome }}</td>
+                    <td class="grid-border">{{ d.letra }}</td>
+                    <td class="grid-border">{{ d.generosTexto }}</td>
+                    <td class="grid-border">
+                        <!-- <a class="waves-effect waves-light btn-small tooltipped" data-position="bottom" (click)="openDetails(d.id)"><i class="material-icons left">remove_red_eye</i></a> -->
+                        <a class="waves-effect waves-light modal-trigger" href="#editarPeriodo"><i class="material-icons left">edit</i></a>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <pagination-controls (pageChange)="p = $event" previousLabel="Anterior" nextLabel="Próxima">
+        </pagination-controls>
+    </div>
+
+    <div id="novomusica" class="modal">
+        <div class="modal-header">
+            <i class="material-icons icons">add_box</i>
+            <span style="vertical-align: middle;">Novo Música</span>
+        </div>
+        <div class="modal-content">
+            <div input-field>
+                <input type="text" name="periodoReferencia" ng-model="musica.nome" />
+                <label for="periodoReferencia">Nome do Música</label>
+            </div>
+            <div input-field>
+                <span style="vertical-align: middle;">Letra</span>
+                <input type="text" id="editPeriodoNome" name="editPeriodo" ng-value="musica.letra"  />
+            </div>
+            <div input-field>
+                <select class="" ng-model="musica.generos" material-select multiple watch>
+                    <option ng-repeat="value in listaGeneros" value="{{value.codGenero}}">{{value.codGenero + ' - '+ value.Nome}}</option>
+
+                </select>
+            </div>
+
+        </div>
+
+
+            <div class="modal-footer">
+                <a class="btn-confirm modal-action modal-close waves-effect waves-blue btn blue" style="margin-left:10px" ng-click="salvarNovomusica()">Salvar</a>
+                <a class="btn-cancel modal-action modal-close waves-effect waves-orange btn orange lighten-1" ng-click="limpamusica()">Cancelar</a>
+            </div>
+        </div>
+    <div id="editarPeriodo" class="modal">
+        <div class="modal-header">
+            <i class="material-icons icons">edit</i>
+            <h4>Editando:</h4>
+            <div input-field>
+                <input type="text" name="periodoReferencia" ng-model="musica.nome" />
+                <label for="periodoReferencia">Nome do Música</label>
+            </div>
+            <div input-field>
+                <span style="vertical-align: middle;">Letra</span>
+                <input type="text" id="editPeriodoNome" name="editPeriodo" ng-value="musica.letra" />
+            </div>
+            <div input-field>
+                <select class="" ng-model="musica.generos" material-select multiple watch>
+                    <option ng-repeat="value in listaGeneros" value="{{value.codGenero}}">{{value.codGenero + ' - '+ value.Nome}}</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="modal-content">
+            <p>Você confirma a alteração do Música?</p>
+        </div>
+        <div class="modal-footer">
+            <a class="btn-confirm modal-action modal-close waves-effect waves-blue btn blue" style="margin-left:10px" ng-click="atualizamusica()">Confirmar</a>
+            <a class="btn-cancel modal-action modal-close waves-effect waves-orange btn orange lighten-1" ng-click="limpamusica()">Cancelar</a>
+        </div>
+    </div>
+    <div id="ativarInativarPeriodo" class="modal">
+        <div class="modal-header">
+            <i class="material-icons icons">delete</i>
+            <span style="vertical-align: middle;">Remover Música</span>
+        </div>
+        <div class="modal-content">
+            <p>Você deseja realmente remover este Música?</p>
+        </div>
+        <div class="modal-footer">
+            <a class="btn-confirm modal-action modal-close waves-effect waves-blue btn blue" style="margin-left:10px" ng-click="removerPeriodo()">Confirmar</a>
+            <a class="btn-cancel modal-action modal-close waves-effect waves-orange btn orange lighten-1" ng-click="limpaPeriodo()">Cancelar</a>
+        </div>
+    </div>
+</div>

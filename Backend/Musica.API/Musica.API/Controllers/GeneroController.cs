@@ -29,11 +29,11 @@ namespace Musica.API.Controllers
            GeneroRepository.Insert(genero);
         }
 
-        [HttpPost]
-        public void Associa([FromBody]MusicaDAL.Models.MusicaGenero relaciona)
-        {
-            MusicaGeneroRepository.Insert(relaciona);
-        }
+        //[HttpPost]
+        //public void Associa([FromBody]MusicaDAL.Models.MusicaGenero relaciona)
+        //{
+        //    MusicaGeneroRepository.Insert(relaciona);
+        //}
 
         [HttpPut]
         public void Put([FromBody]Genero genero)

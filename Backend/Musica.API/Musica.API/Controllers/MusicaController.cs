@@ -19,6 +19,11 @@ namespace Musica.API.Controllers
             foreach (var musica in todasMusicas)
             {
                 musica.generos = GeneroRepository.GetAllByMusic(musica.CODMUSICA);
+                foreach (var genero in musica.generos)
+                {
+                    musica.GenerosTexto += genero.NOME + ",";
+                }
+               
             }
 
             return todasMusicas;

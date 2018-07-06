@@ -31,6 +31,14 @@ namespace MusicaDAL.Models
             set { letra = value; }
         }
 
+        private string generosTexto;
+        [BlueORM.Column("generosTexto", false,true)]
+        public string GenerosTexto
+        {
+            get { return generosTexto; }
+            set { generosTexto = value; }
+        }
+
         public List<Genero> generos;
 
         public Musica()

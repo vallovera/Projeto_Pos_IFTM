@@ -53,8 +53,9 @@ angular.module('App').controller('Genero',
             $http.put('http://localhost:32666/api/Genero', obj)
                 .then(function (ResData) {
                     swal('Feito!', 'O Gênero foi atualizado com sucesso.', 'success');
+                    
+                   // $scope.genero.Nome = $scope.editNameAging;
                     $scope.buscaTodosGenero();
-                    $scope.genero.Nome = $scope.editNameAging;
                  
                 })
                 .catch(function (ResData) {
@@ -65,6 +66,7 @@ angular.module('App').controller('Genero',
                     }
                 });
             $scope.limpaGenero();
+            $scope.buscaTodosGenero();
         }
 
         $scope.salvarNovoGenero = function () {
@@ -90,6 +92,7 @@ angular.module('App').controller('Genero',
                 });
 
             $scope.limpaGenero();
+            $scope.buscaTodosGenero();
         }
 
         $scope.setClickedRow = function (index) {
